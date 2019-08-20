@@ -11,9 +11,9 @@ const Weather = ({hour, temp, clouds, description}) => {
 	}
 
 	const SetTemp = ({temp}) => {
-		var temp = Math.round(temp - 273)
+		var temperature = Math.round(temp - 273)
 		return (
-			<p className="weatherTemp">{temp} °C</p>
+			<p className="weatherTemp">{temperature} °C</p>
 			)
 	}
 	
