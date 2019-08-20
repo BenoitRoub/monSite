@@ -1,0 +1,117 @@
+
+
+.header {
+	position: fixed;
+	height: 63px;
+	left: 0px;
+	right: 0;
+	top: 0;
+	background: linear-gradient(#00000090, #00000065, #00000040,#00000010, #00000000);
+	color: rgba(236,240,241,1) ;
+	display: flex;
+	justify-content: space-between;
+	z-index: 2;
+	line-height: 63px;
+	font-weight: 700;
+}
+
+.headerSwitched {
+	display: flex;
+	justify-content: space-between;
+	z-index: 2;
+	line-height: 63px;
+	font-weight: 700;
+}
+
+.headerOnScroll {
+	display: flex;
+	justify-content: space-between;
+	z-index: 2;
+	line-height: 63px;
+	font-weight: 700;
+}
+
+
+p {
+	font-family: gt super display,Times New Roman,serif;
+	transition: 0.2s;
+}
+
+
+.siteName {
+	display: flex;
+	justify-content: center;
+	font-family: 'Concert One', cursive;
+	font-size: 2.5em;
+	font-weight: 500;
+	display: block;
+	padding: 0 15px;
+}
+
+.siteName:hover {
+	font-size: 2.7em;
+}
+
+
+.logoCategories {
+	margin: 16.5px;
+	width: 30px;
+	height: 30px;	
+	margin-right: 233.5px;
+	background-image: url('../.././image/categories.png');
+	background-size: contain;
+	transition: 0.4s;
+}
+
+.logoCategories:hover {
+	width: 31px;
+	height: 31px;
+	margin: 16px;	
+	margin-right: 233.5px;
+}
+
+.logoClose {
+	display: block;
+	margin: 16.5px;
+	width: 30px;
+	height: 30px;
+	margin-right: 233.5px;
+	background-image: url('../.././image/delete-button.png');
+	background-size: contain;
+	transition: 0.3s;
+}
+
+.logoClose:hover {
+	width: 31px;
+	height: 31px;
+	margin: 16px;	
+	margin-right: 233.5px;
+}
+
+@media (max-width: 1100px) {
+	.logoClose {
+		margin: 19px;
+		margin-right: 25vw;
+		width: 25px;
+		height: 25px;
+	}
+
+	.logoClose:hover {
+		margin: 19px;
+		margin-right: 25vw;
+		width: 25px;
+		height: 25px;
+	}
+	.logoCategories {
+		margin-right: 25vw;
+		width: 25px;
+		height: 25px;
+	}
+	
+	.logoCategories:hover {
+		margin: 19px;
+		margin-right: 25vw;
+		width: 25px;
+		height: 25px;
+	}
+}

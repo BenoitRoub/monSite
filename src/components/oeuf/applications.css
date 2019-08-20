@@ -1,0 +1,59 @@
+
+
+.appContainer {
+	background: #dfe1e2;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	font-size: 1.8em;
+}	
+
+.appContainer:hover {
+	height: 7em;
+	width: 7em;
+	margin: -0.2em;
+}
+
+p {
+	margin:0;
+	padding: 0;
+}
+
+.first {
+/*	position: absolute;
+	top: 20%;
+	left: 20%;
+*/	z-index: 2;
+	width: 100%;
+	height: 100%;
+	color: black;
+	background: center url('../.././image/meteo-screenshot.png');
+	background-size: cover;
+	box-shadow: 0px 0px 10px rgb(67, 35, 202);
+}
+
+.second {
+	position: absolute;
+	top: 20%;
+	right: 20%;
+	z-index: 2;
+	color: black;
+}
+
+.third {
+	position: absolute;
+	bottom: 20%;
+	left: 20%;
+	z-index: 2;
+	color: black;
+}
+
+.fourth {
+	position: absolute;
+	bottom: 20%;
+	right: 20%;
+	z-index: 2;
+	color: black;
+}

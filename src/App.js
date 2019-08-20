@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header/header';
+import LogForm from './components/log/logForm';
+import PresentationText from './components/presentationText/presentationText';
+import Oeuf from './components/oeuf/oeuf'
+import Meteo from './components/applications/meteo/meteo';
 
-function App() {
+const App = () => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <LogForm />
+      <PresentationText />
+      <Oeuf />
+      <Meteo />
     </div>
   );
 }
