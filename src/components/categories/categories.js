@@ -17,7 +17,7 @@ const CategoriesMenu = () => {
 	}
 
 	const switchMeteo = () => {
-		dispatch({type: 'SWITCHMETEO'})
+		dispatch({type: 'DISPLAYMETEO'})
 	}
  
 	const transitions = useTransition(statusHeader, null, {

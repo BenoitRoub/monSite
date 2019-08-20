@@ -10,6 +10,8 @@ function ApplicationsReducer(state= initialState, action) {
 			return { status: !state.status};
 		case 'SWITCHMETEO' :
 			return { statusMeteo: !state.statusMeteo};
+		case 'DISPLAYMETEO' :
+			return { statusMeteo: true}
 		default: 
 			return state;
 	}
