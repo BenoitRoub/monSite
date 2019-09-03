@@ -1,6 +1,8 @@
 const initialState = {
 	status: false,
-	statusMeteo: false
+	statusMeteo: false,
+	statusToDoList: false,
+	statusCalendar: false,
 }
 
 function ApplicationsReducer(state= initialState, action) {
@@ -10,8 +12,10 @@ function ApplicationsReducer(state= initialState, action) {
 			return { status: !state.status};
 		case 'SWITCHMETEO' :
 			return { statusMeteo: !state.statusMeteo};
-		case 'DISPLAYMETEO' :
-			return { statusMeteo: true}
+		case 'SWITCHTODOLIST' :
+			return { statusToDoList: !state.statusToDoList};
+		case 'SWITCHCALENDAR' : 
+			return { statusCalendar: !state.statusCalendar};
 		default: 
 			return state;
 	}

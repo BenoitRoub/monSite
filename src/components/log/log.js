@@ -6,7 +6,6 @@ const Log = () => {
 
 	
 	const Username = useSelector((state) => state.logInfo.username);
-	const Password = useSelector((state) => state.logInfo.password);
 	const login = useSelector((state) => state.login.login);
 	
 	const dispatch = useDispatch();

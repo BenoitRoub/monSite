@@ -1,37 +1,33 @@
 import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Weather from './weather';
-import './meteo.css';
-import StaticHeader from '../.././header/staticHeader';
+import style from './meteo.module.css';
 
 const Meteo = () => {
 
   const APIKEY = "cd1ada7411fb68b2257528147d1a7b4b"
 
-  const [weather, setWeather] = useState([]);
   const [weathers, setWeathers] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('Paris');
   const [name, setName] = useState('Paris');
   const [error, setError] = useState(false)
 
-  useEffect(()=> {
-    getWeather();
-  }, [query]);
+ 
 
   const getWeather = async () => {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${query}&APPID=${APIKEY}`)
     const data = await response.json();
-    console.log(data.cod);
     if (data.cod === "200")
-      {setWeather(data.list[0]);
-        console.log(data)
-            setWeathers(data.list.slice(0,4));
+      {     setWeathers(data.list.slice(0,4));
             setName(data.city.name);
-            setError(false);
-            console.log(error)}
+            setError(false);}
     else setError(true)
   };
+
+   useEffect(()=> {
+    getWeather();
+  }, [query]);
 
   const updateSearch = e => {
     setSearch(e.target.value);
@@ -53,31 +49,31 @@ const Meteo = () => {
 
   if (status)
     return (
-      <div className="Meteo" id="meteo">
-        <p className="retourBoutton"
+      <div className={style.Meteo} id="meteo">
+        <p className={style.retourBoutton}
         onClick={close}>Retour</p>
         <form onSubmit={getSearch}
-        className="search-form">
+        className={style.searchForm}>
           <input 
-          className="search-bar"
+          className={style.searchBar}
           value={search}
           onChange={updateSearch}
           type="text"
           placeholder=" nom de ville ex : Paris..."
           />
-          { !error ? true : <div className="errorContainer">
+          { !error ? true : <div className={style.errorContainer}>
                               <p>Nous n'avons pas d'informations à propos de cette ville</p>
                             </div>} 
           <button
           onSubmit={getSearch}
-          className="search-button"
+          className={style.searchButton}
           type="submit">
           Search
           </button>
         </form>
-        { error ? false : <p className="nom">{name}</p>}
+        { error ? false : <p className={style.nom}>{name}</p>}
         { error ? false : 
-          <div className="weather">
+          <div className={style.weather}>
            {weathers.map(weather => (
             <Weather
               hour={weather.dt_txt}

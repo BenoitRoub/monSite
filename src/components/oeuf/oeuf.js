@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './oeuf.module.css';
-import {useSpring, animated} from 'react-spring';
 import { useDispatch, useSelector} from 'react-redux';
 import Applications from './applications.js';
 
@@ -11,20 +10,43 @@ const Oeuf = () => {
 
 	const dispatch = useDispatch();
 
-	const swicthApplications = () => {
-		dispatch({type: 'SWITCHAPPLICATIONS'})
-		console.log (applicationsAreNotDisplay)
+	const switchToDo = () => {
+		dispatch({type: 'SWITCHTODOLIST'})
+	}
+	const switchMeteo = () => {
+		dispatch({type: 'SWITCHMETEO'})
+	}
+	const switchCalendar = () => {
+		dispatch({type: 'SWITCHCALENDAR'})
 	}
 	
 
 	return (
-		<div className={style.oeufContainer}>
-			<div className={style.oeufStyle}
-				onClick={swicthApplications}>
-			{ applicationsAreNotDisplay ? false : <div className={style.plusIcon}></div> }
-			{ !applicationsAreNotDisplay ? true : <div className={style.moinsIcon}></div> }
+		<div className={style.appliContainer}>
+			<div className={style.allAppli} >
+			<div className={style.appliHaute}>
+				<div className={style.appliStatic}>
+					<div
+					onClick={switchMeteo}
+					class={style.appliGaucheHaute}></div>
+				</div>
+				<div className={style.appliStatic}>
+					<div 
+					onClick={switchToDo}
+					class={style.appliDroiteHaute}></div>
+				</div>
 			</div>
-			<Applications />
+			<div className={style.appliHaute}>
+				<div className={style.appliStatic}>
+					<div 
+					onClick={switchCalendar}
+					class={style.appliGaucheBasse}></div>
+				</div>
+				<div className={style.appliStatic}>
+					<div class={style.appliDroiteBasse}></div>
+				</div>
+			</div>
+			</div>
 		</div>
 		)
 }

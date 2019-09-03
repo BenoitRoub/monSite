@@ -4,6 +4,8 @@ import LogReducer from './LogReducer';
 import showCategoriesReducer from './showCategoriesReducer';
 import switchHeaderReducer from './HeaderReducer';
 import ApplicationsReducer from './applicationsReducer';
+import ToDoListReducer from './ToDoListReducer';
+import CalendarReducer from './calendarReducer';
 
 const allReducers = combineReducers({
 	login: LoginReducer,
@@ -11,6 +13,8 @@ const allReducers = combineReducers({
 	showCategories: showCategoriesReducer,
 	headerStatus: switchHeaderReducer,
 	statusApplications: ApplicationsReducer,
+	ToDoList: ToDoListReducer,
+	Calendar: CalendarReducer,
 });
 
 export default allReducers;

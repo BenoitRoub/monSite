@@ -46,16 +46,19 @@ const LogForm = () => {
 							<p className={style.titleForm}>Log In</p>
 							<div className={style.inputContainer}>
 							    <input 
+							    className={style.input}
 						        type="text"
 						        name="username"
 						        placeholder=" Username"
 							    />
 							    <input 
+							    className={style.input}
 						      	type="text"
 						      	name="password"
 						      	placeholder=" Password"
 						        />
 						         <button
+							    className={style.button}
 						        type="submit">
 						        Login
 						        </button>

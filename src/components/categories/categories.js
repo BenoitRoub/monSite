@@ -2,8 +2,7 @@ import React from 'react';
 import style from './categories.module.css';
 import style2 from '.././header/header.module.css';
 import {useSelector, useDispatch} from 'react-redux';
-import {useSpring, useTransition, animated} from 'react-spring';
-import Header from '.././header/header';
+import {useTransition, animated} from 'react-spring';
 import CategoriesButton from '.././header/buttonCategories';
 import Log from '.././log/log';
 
@@ -12,14 +11,18 @@ const CategoriesMenu = () => {
 	const dispatch = useDispatch()
 	const statusHeader = useSelector((state) => state.headerStatus.headerStatus);
 
-	const closeCategories = () => {
-		dispatch({type:'CLOSECATEGORIES'})
-	}
-
 	const switchMeteo = () => {
-		dispatch({type: 'DISPLAYMETEO'})
+		dispatch({type: 'SWITCHMETEO'})
 	}
  
+ 	const switchToDoList = () => {
+ 		dispatch({type: 'SWITCHTODOLIST'})
+ 	}
+
+ 	const switchCalendar = () => {
+ 		dispatch({type: 'SWITCHCALENDAR'})
+ 	}
+
 	const transitions = useTransition(statusHeader, null, {
 			from: { position: "fixed",
 					top:-143,
@@ -52,14 +55,14 @@ const CategoriesMenu = () => {
 		item = 'showCategories' && <animated.div key={key} style={props}>
 						<div className={style2.headerSwitched}>
 							<CategoriesButton />
-							<p className={style2.siteName}>siteName</p>
+							<p className={style2.siteName}>Gomgom</p>
 							<Log />
 						</div>
 						<div  className={style.listCategories}>
 							<a onClick={switchMeteo} href="#meteo">Météo</a>
-							<a>acheteurMalin</a>
-							<a>troisièmeProjet</a>
-							<a>quatrièmeProjet</a>
+							<a onClick={switchToDoList} href="#todolist">To Do List</a>
+							<a onClick={switchCalendar} href="#calendar">Calendrier</a>
+							<a href="#meteo">quatrièmeProjet</a>
 						</div>
 				</animated.div>
 		))

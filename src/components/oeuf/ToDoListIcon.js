@@ -3,19 +3,19 @@ import { useDispatch } from 'react-redux';
 import { useTransition, animated} from 'react-spring';
 
 
-const MeteoIcon = ({status}) =>{
+const ToDoListIcon = ({status}) =>{
 
 		const dispatch = useDispatch();
 
-		const openMeteo = () => {
-			dispatch({type: 'SWITCHMETEO'})
+		const openToDoList = () => {
+			dispatch({type: 'SWITCHTODOLIST'})
 		};
 
 
 		const transitions = useTransition(status, null, {
 				from: { position: "absolute",
 						top: "45%",
-						left: "45%",
+						right: "45%",
 						width: "0em",
 	 					height: "0em",
 						zIndex:2,
@@ -23,14 +23,14 @@ const MeteoIcon = ({status}) =>{
 						},
 				enter: { position: "absolute",
 							top: "15%",
-							left: "15%",
+							right: "15%",
 							height: "12em",
 							width: "12em",
 							zIndex: 2,
 							color: "black", },
 				leave: { position: "absolute",
 						top: "45%",
-						left: "45%",
+						right: "45%",
 						width: "0em",
 						height: "0em",
 						zIndex:2,
@@ -41,10 +41,10 @@ const MeteoIcon = ({status}) =>{
 		return (
 				transitions.map(({ item, key, props }) =>
 				item &&	<animated.div key={key} style={props}>
-						<p className="appContainer first"
-						onClick={openMeteo}>
+						<p className="appContainer second"
+						onClick={openToDoList}>
 						</p>
-						</animated.div>))
+					</animated.div>))
 	 }
 
-export default MeteoIcon;
+export default ToDoListIcon;

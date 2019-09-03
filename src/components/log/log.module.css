@@ -105,7 +105,7 @@
 	justify-content: center;
 }
 
-input {
+.input {
 	height: 20%;	
 	width: 100%;
 	margin: 7px;
@@ -118,11 +118,11 @@ input {
 	transition: 0.5s;
 }
 
-input:hover {
+.input:hover {
 	box-shadow: 0 0px 4px #cacaca;
 }
 
-button {
+.button {
 	margin: 7px;
 	height: 30px;
 	width: 30%;
@@ -135,7 +135,7 @@ button {
 	transition-duration: 0.5s;
 }
 
-button:hover {
+.button:hover {
 	height: 32px;
 	width: 32%;
 	margin: 6px;

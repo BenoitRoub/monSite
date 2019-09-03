@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import style from './header.module.css';
 import Log from '.././log/log';
 import CategoriesButton from './buttonCategories';
-import {useSpring, useTransition, animated} from 'react-spring';
 import CategoriesMenu from '.././categories/categories';
 import ScrollHeader from './scrollHeader';
 
@@ -12,7 +11,6 @@ const Header = () => {
 
 	const dispatch = useDispatch()
 	const statusHeader = useSelector((state) => state.headerStatus.headerStatus);	
-	const mooveHeader = useSelector((state) => state.headerStatus.headerScroll);
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleOnScroll)
@@ -20,21 +18,20 @@ const Header = () => {
 			dispatch({type: 'SHOWSCROLLHEADER'});
 	}, [] );
 
-	var scrolle=0;
+	var lastYScrolle=0;
 
 	const handleOnScroll = event => {
 		event.preventDefault();
 		const yScroll = window.scrollY;
-		console.log(yScroll)
 		if ( yScroll < 63 )
-			dispatch({type: 'SHOWHEADER'});
+			dispatch({type: 'SHOWHEADER'})
 		else if ( yScroll < 200 )
 			dispatch({type: 'SHOWSCROLLHEADER'})
-		else if ( yScroll < scrolle )
+		else if ( yScroll < lastYScrolle )
 			dispatch({type: 'SHOWSCROLLHEADER'});
-		else if ( yScroll > scrolle )
+		else if ( yScroll > lastYScrolle )
 			dispatch({type: 'CLOSEALLHEADER'});
-		scrolle=yScroll;
+		lastYScrolle=yScroll;
 	}
 
 
@@ -46,7 +43,7 @@ const Header = () => {
 		return(
 			<div className={style.header}>
 				<CategoriesButton />
-				<p className={style.siteName}>siteName</p>
+				<p className={style.siteName}>Gomgom</p>
 				<Log />
 			</div>
 			);

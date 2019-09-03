@@ -5,8 +5,8 @@ const initialState = {
 function switchHeaderReducer(state= initialState, action) {
 
 	switch (action.type) {
-		case 'SGOWHEADER' :
-			return { headerStatus: 'showHeader '};
+		case 'SHOWHEADER' :
+			return { headerStatus: 'showHeader'};
 		case 'CLOSECATEGORIES' :
 			return { headerStatus: 'showScrollHeader'};
 		case 'SHOWCATEGORIES' :

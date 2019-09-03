@@ -8,7 +8,7 @@ const StaticHeader = () => {
 					return (
 						<div className={style.headerOnScroll}>
 							<CategoriesButton />
-							<p className={style.siteName}>siteName</p>
+							<p className={style.siteName}>Gomgom</p>
 							<Log />
 						</div>)
 }

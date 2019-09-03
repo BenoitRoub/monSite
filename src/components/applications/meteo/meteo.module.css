@@ -15,8 +15,8 @@
 
 .retourBoutton {
   position: absolute;
-  top: 60px;
-  left: 6%;
+  top: 20px;
+  right: 20px;
   font-size: 25px;
   font-weight: 700;
   color: white;  
@@ -29,7 +29,7 @@
 }
 
 
-.search-form {
+.searchForm {
   display: flex;
   padding-top: 60px;
   flex-direction: column;
@@ -39,13 +39,13 @@
 }
 
 
-.search-bar {
+.searchBar {
   display:flex;
   align-items: center;
   width: 40%;
   height: 25px;
   margin: 6vh 3vw ;
-  box-shadow: 0 0px 1px black;
+  box-shadow: 0 0px 3px black;
 }
 
 .errorContainer {
@@ -57,7 +57,7 @@
   color: #000000c4;
 }
 
-.search-button {
+.searchButton {
   display: flex;
   height: 25px;
   border-radius: 5px;
@@ -66,14 +66,13 @@
   box-shadow: 0 0px 3px black;
 }
 
-.search-button:hover {
+.searchButton:hover {
   display: flex;
   height: 25px;
   border-radius: 5px;
   width: 100px;
   background: rgba(236,240,241,1.0);
   box-shadow: 0 0px 5px black;
-  margin: 7px;
 }
 
 .nom {
@@ -113,7 +112,6 @@
 
 .weatherDate {
   border-bottom: 1px solid black; 
-  width:10%;
   padding: 10%;
 }
 

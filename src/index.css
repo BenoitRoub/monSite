@@ -28,3 +28,18 @@ code {
 	}
 }
 
+button {
+	display:flex;
+	justify-content: center;
+	border-radius: 1px;
+	border-style: none;	
+	box-shadow: 0 0px 3px #525252;
+}
+
+input {
+	display:flex;
+	justify-content: center;
+	border-radius: 1px;
+	border-style: none;	
+	box-shadow: 0 0px 3px #525252;
+}
