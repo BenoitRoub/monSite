@@ -6,21 +6,46 @@
 	justify-content: center;
 	flex-direction: column;
 	font-size: 16px;
-
-	background: center url('../.././image/banniere2.jpg');
-	background-size: cover;
+	background: #feccb1; /* Old browsers */
+	background: -moz-linear-gradient(
+		-45deg,
+		#feccb1 0%,
+		#f17432 40%,
+		#f17432 46%,
+		#f17432 46%,
+		#ea5507 70%,
+		#fb955e 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		-45deg,
+		#feccb1 0%,
+		#f17432 40%,
+		#f17432 46%,
+		#f17432 46%,
+		#ea5507 70%,
+		#fb955e 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		135deg,
+		#feccb1 0%,
+		#f17432 40%,
+		#f17432 46%,
+		#f17432 46%,
+		#ea5507 70%,
+		#fb955e 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', endColorstr='#fb955e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 @media (max-width: 700px) {
- 	.wrap {
- 		background: center url('../.././image/banniere-portable.jpg');
- 		background-size: cover;
- 	}
+	.wrap {
+		background: center url("../.././image/banniere-portable.jpg");
+		background-size: cover;
+	}
 
- 	.title {
-
-	text-shadow: 0 0 4px black;
- 	}
- }
+	.title {
+		text-shadow: 0 0 4px black;
+	}
+}
 
 .title {
 	font-size: 3em;

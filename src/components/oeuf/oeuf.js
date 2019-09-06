@@ -28,22 +28,22 @@ const Oeuf = () => {
 				<div className={style.appliStatic}>
 					<div
 					onClick={switchMeteo}
-					class={style.appliGaucheHaute}></div>
+					className={style.appliGaucheHaute}></div>
 				</div>
 				<div className={style.appliStatic}>
 					<div 
 					onClick={switchToDo}
-					class={style.appliDroiteHaute}></div>
+					className={style.appliDroiteHaute}></div>
 				</div>
 			</div>
 			<div className={style.appliHaute}>
 				<div className={style.appliStatic}>
 					<div 
 					onClick={switchCalendar}
-					class={style.appliGaucheBasse}></div>
+					className={style.appliGaucheBasse}></div>
 				</div>
 				<div className={style.appliStatic}>
-					<div class={style.appliDroiteBasse}></div>
+					<div classNAme={style.appliDroiteBasse}></div>
 				</div>
 			</div>
 			</div>

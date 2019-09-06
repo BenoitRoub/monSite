@@ -2,8 +2,8 @@
 	height: 100px;
 	width: 100px;
 	border-radius: 50%;
-	/*#88b949*//*
-	background: linear-gradient(#fff0d3, #bcda95) ;*//*
+	/*#88b949*/ /*
+	background: linear-gradient(#fff0d3, #bcda95) ;*/ /*
 	background: linear-gradient(130deg,#ffffff, #3c3c3c);
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
 	display: flex;
@@ -49,7 +49,6 @@
 	display: flex;
 	width: 300px;
 	height: 300px;
-	border-radius: 50%;
 	box-shadow: 0 0 5px;
 	flex-direction: column;
 }
@@ -66,29 +65,26 @@
 }
 
 .appliGaucheHaute {
-	background: center url('../.././image/meteo-screenshot.png');
+	background: center url("../.././image/meteo-screenshot.png");
 	background-size: cover;
 	transition: 1.5s;
 	height: 150px;
 	width: 150px;
-	border-radius: 100% 0 0 0;
 }
 
 .appliDroiteHaute {
 	height: 150px;
 	width: 150px;
 	transition: 1.5s;
-	border-radius: 0 100% 0 0;	
-	background: center url('../.././image/todolist-screenshot.png');
+	background: center url("../.././image/todolist-screenshot.png");
 	background-size: cover;
 }
 
 .appliGaucheBasse {
 	height: 150px;
-	width: 150px;	
+	width: 150px;
 	transition: 1.5s;
-	border-radius: 0 0 0 100%;
-	background: center url('../.././image/calendrier-screenshot.png');
+	background: center url("../.././image/calendrier-screenshot.png");
 	background-size: cover;
 }
 
@@ -96,38 +92,37 @@
 	height: 150px;
 	width: 150px;
 	background: black;
-	border-radius: 0 0 100% 0;
 }
 
 .appliGaucheHaute:hover {
 	position: absolute;
 	border-radius: 0;
-	height:250px;
-	width:250px;
+	height: 250px;
+	width: 250px;
 	box-shadow: 0 0 3px black;
 	margin: -100px;
 }
 .appliDroiteHaute:hover {
 	position: absolute;
 	border-radius: 0;
-	height:250px;
-	width:250px;	
+	height: 250px;
+	width: 250px;
 	box-shadow: 0 0 3px black;
-	margin-top: -100px ;
+	margin-top: -100px;
 }
 .appliGaucheBasse:hover {
 	position: absolute;
 	border-radius: 0;
-	height:250px;
-	width:250px;
+	height: 250px;
+	width: 250px;
 	box-shadow: 0 0 3px black;
-	margin-left:-100px;
+	margin-left: -100px;
 }
 .appliGaucheBasse:hover {
 	position: absolute;
 	border-radius: 0;
-	height:250px;
-	width:250px;
+	height: 250px;
+	width: 250px;
 	box-shadow: 0 0 3px black;
 	margin-bottom: -100px;
 }

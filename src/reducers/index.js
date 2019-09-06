@@ -6,6 +6,7 @@ import switchHeaderReducer from './HeaderReducer';
 import ApplicationsReducer from './applicationsReducer';
 import ToDoListReducer from './ToDoListReducer';
 import CalendarReducer from './calendarReducer';
+import SwapAppReducer from './swapAppReducer';
 
 const allReducers = combineReducers({
 	login: LoginReducer,
@@ -15,6 +16,7 @@ const allReducers = combineReducers({
 	statusApplications: ApplicationsReducer,
 	ToDoList: ToDoListReducer,
 	Calendar: CalendarReducer,
+	swapApp: SwapAppReducer,
 });
 
 export default allReducers;

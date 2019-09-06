@@ -3,13 +3,10 @@
   text-align: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: 100vh;
-  height: 100vh;
-  left:0;
-  right:0;
-  background: url('../../.././image/background-meteo2.jpg');
-  background-size: cover;
+  padding-top: 130px;
+  min-height: 110vh;
+  width: 100%;
+  background: #fafafa;
   font-size: 1.2em;
 }
 
@@ -19,7 +16,7 @@
   right: 20px;
   font-size: 25px;
   font-weight: 700;
-  color: white;  
+  color: white;
   text-shadow: 0 0 5px black;
   z-index: 3;
 }
@@ -27,7 +24,6 @@
 .retourBoutton:hover {
   text-shadow: 0 0 0.2px;
 }
-
 
 .searchForm {
   display: flex;
@@ -38,20 +34,19 @@
   width: 50%;
 }
 
-
 .searchBar {
-  display:flex;
+  display: flex;
   align-items: center;
   width: 40%;
   height: 25px;
-  margin: 6vh 3vw ;
+  margin: 6vh 3vw;
   box-shadow: 0 0px 3px black;
 }
 
 .errorContainer {
   margin: 0 0 10vh;
   padding: 20px;
-  background:rgba(236,240,241,1.0);
+  background: rgba(236, 240, 241, 1);
   border-radius: 5px;
   border: solid 1px #999;
   color: #000000c4;
@@ -62,7 +57,7 @@
   height: 25px;
   border-radius: 5px;
   width: 100px;
-  background: rgba(236,240,241,1.0);
+  background: rgba(236, 240, 241, 1);
   box-shadow: 0 0px 3px black;
 }
 
@@ -71,53 +66,35 @@
   height: 25px;
   border-radius: 5px;
   width: 100px;
-  background: rgba(236,240,241,1.0);
+  background: rgba(236, 240, 241, 1);
   box-shadow: 0 0px 5px black;
 }
 
-.nom {
-  margin-top: 10vh;
-  margin: 5vh;
-  font-family: 'Concert One', cursive;
-  font-size: 2em;
-  text-shadow: 0 0 3px black;
-  font-weight: 500;
-  color: white;
-}
-
 .weather {
-  width: 52%;
-  height: 30%;
+  margin: 25px;
+  width: 75%;
+  height: 280px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  box-shadow: 0 0 4px black;
+  box-shadow: 0 0 2px #bdbdbd;
+  flex-direction: column;
 }
 
-
-
 .weatherInfo {
-  display : flex;
+  display: flex;
   justify-content: space-evenly;
-  width: 25%;
+  width: 100%;
+  height: 69px;
   align-items: center;
-  flex-direction: column;
   font-weight: normal;
-  background: #dfe1e2;
+  background: #fafafa;
 }
 
 .weatherInfo:hover {
-  background: #a7a7a7;
+  background: white;
 }
 
 .weatherDate {
-  border-bottom: 1px solid black; 
   padding: 10%;
 }
-
-
-
-
-
-
-

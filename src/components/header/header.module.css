@@ -1,47 +1,49 @@
-
-
 .header {
 	position: fixed;
 	height: 55px;
-	left: 0px;
-	right: 0;
-	top: 0;
-	background: linear-gradient(#00000090, #00000080, #00000070,#00000050, #00000030, #00000000);
-	color: rgba(236,240,241,1) ;
+	top: 0px;
+	width: 100%;
+	background: linear-gradient(#ff6a00, #ff6a00);
+	color: rgba(236, 240, 241, 1);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	z-index: 2;
-	line-height: 55px;
-	font-weight: 700;
 }
 
 .headerSwitched {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	z-index: 2;
-	line-height: 55px;
-	font-weight: 700;
+	height: 55px;
+	background: #bcaaa4;
 }
 
 .headerOnScroll {
+	position: fixed;
+	height: 55px;
+	top: 0px;
+	width: 100%;
+	background: #757575;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	z-index: 2;
-	line-height: 55px;
-	font-weight: 700;
+	height: 55px;
+	color: #eaeaea;
+	z-index: 1;
 }
-
 
 p {
-	font-family: gt super display,Times New Roman,serif;
+	font-family: gt super display, Times New Roman, serif;
 	transition: 0.2s;
 }
-
 
 .siteName {
 	display: flex;
 	justify-content: center;
-	font-family: 'Concert One', cursive;
+	font-family: "Concert One", cursive;
 	font-size: 2.2em;
 	font-weight: 600;
 	display: block;
@@ -50,68 +52,4 @@ p {
 
 .siteName:hover {
 	font-size: 2.5em;
-}
-
-
-.logoCategories {
-	margin: 12.5px;
-	width: 30px;
-	height: 30px;	
-	margin-right: 233.5px;
-	background-image: url('../.././image/categories.png');
-	background-size: contain;
-}
-
-.logoCategories:hover {
-	width: 33px;
-	height: 33px;
-	margin: 11px;	
-	margin-right: 233.5px;
-}
-
-.logoClose {
-	display: block;
-	margin: 12.5px;
-	width: 30px;
-	height: 30px;
-	margin-right: 233.5px;
-	background-image: url('../.././image/delete-button.png');
-	background-size: contain;
-}
-
-.logoClose:hover {
-	width: 33px;
-	height: 33px;
-	margin: 11px;	
-	margin-right: 233.5px;
-}
-
-@media (max-width: 1100px) {
-	.logoClose {
-		margin: 15px;
-		margin-right: 25vw;
-		width: 25px;
-		height: 25px;
-	}
-
-	.logoClose:hover {
-		margin: 15px;
-		margin-right: 25vw;
-		width: 25px;
-		height: 25px;
-	}
-
-	.logoCategories {
-		margin: 15px;
-		margin-right: 25vw;
-		width: 25px;
-		height: 25px;
-	}
-	
-	.logoCategories:hover {
-		margin: 15px;
-		margin-right: 25vw;
-		width: 25px;
-		height: 25px;
-	}
 }

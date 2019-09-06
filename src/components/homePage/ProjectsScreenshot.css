@@ -1,0 +1,54 @@
+.classProjectSwapApp {
+	background: center / contain url("../.././image/swapApp-screenshot.png");
+	height: 250px;
+	width: 250px;
+	margin-left: -20;
+}
+
+.classProjectSwapApp:hover {
+	background: center / contain url("../.././image/swapApp-screenshot.png");
+	margin-top: -50px;
+	height: 350px;
+	width: 350px;
+}
+
+.classProjectToDo {
+	background: center / contain url("../.././image/todolist-screenshot.png");
+	height: 250px;
+	width: 250px;
+}
+
+.classProjectToDo:hover {
+	background: center / contain url("../.././image/todolist-screenshot.png");
+	margin-top: -50px;
+	height: 350px;
+	width: 350px;
+}
+
+.classProjectCalendar {
+	background: center / contain url("../.././image/calendrier-screenshot.png");
+	margin-left: 40px;
+	height: 250px;
+	width: 250px;
+}
+
+.classProjectCalendar:hover {
+	background: center / contain url("../.././image/calendrier-screenshot.png");
+	margin-top: -50px;
+	height: 350px;
+	width: 350px;
+}
+
+.classProjectWeather {
+	background: center / contain url("../.././image/meteo-screenshot.png");
+	height: 250px;
+	width: 250px;
+}
+
+.classProjectWeather:hover {
+	background: center / contain url("../.././image/meteo-screenshot.png");
+	margin-top: -50px;
+	height: 350px;
+	width: 350px;
+}
+
