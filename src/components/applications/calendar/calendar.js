@@ -57,15 +57,7 @@ const Calendar = () => {
 		"décembre"
 	];
 
-	const days = [
-		"Lundi",
-		"Mardi",
-		"Mercredi",
-		"Jeudi",
-		"Vendredi",
-		"Samedi",
-		"Dimanche"
-	];
+	const days = ["L", "M", "M", "J", "V", "S", "D"];
 
 	const dispatch = useDispatch();
 
@@ -82,7 +74,7 @@ const Calendar = () => {
 	const styleContainer = {
 		background: "white",
 		height: 620,
-		maxWidth: 600,
+		maxWidth: 350,
 		boxShadow: "0 0 3px",
 		borderRadius: "5px",
 		display: "flex",
@@ -139,11 +131,16 @@ const Calendar = () => {
 								number={numéroJour}
 								style={{
 									background: "#3f51b5",
-									color: "white"
+									color: "white",
+									height: 50,
+									minWidth: 50
 								}}
 							/>
 						) : (
-							<Jour number={numéroJour} />
+							<Jour
+								style={{ height: 50, minWidth: 50 }}
+								number={numéroJour}
+							/>
 						)
 					)}
 				</ol>

@@ -22,29 +22,45 @@ export default function Contact() {
     border: "1px solid rgba(255, 255, 255, 1)",
     display: "flex",
     justifyContent: "space-between",
-    width: 150,
     marginLeft: "-110px"
+  };
+  const buttonStyleMobile = {
+    border: "1px solid rgba(255, 255, 255, 1)",
+    display: "flex",
+    justifyContent: "space-between",
+    marginLeft: "-20px"
   };
 
   return (
     <div style={{ display: "flex", width: "40px" }}>
-      <Button
-        variant="outlined"
-        color="primary"
-        onClick={handleClickOpen}
-        style={buttonStyle}
-      >
-        <p
-          style={{
-            fontFamily: "Montserrat, sans-serif",
-            fontSize: "1em",
-            color: "white"
-          }}
+      {window.screen.width > 1000 ? (
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={handleClickOpen}
+          style={buttonStyle}
         >
-          Contact
-        </p>
-        <i class="fas fa-envelope fa-2x" style={{ color: "white" }} />
-      </Button>
+          <p
+            style={{
+              fontFamily: "Montserrat, sans-serif",
+              fontSize: "1em",
+              color: "white"
+            }}
+          >
+            Contact &nbsp;&nbsp;
+          </p>
+          <i class="fas fa-envelope fa-2x" style={{ color: "white" }} />
+        </Button>
+      ) : (
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={handleClickOpen}
+          style={buttonStyleMobile}
+        >
+          <i class="fas fa-envelope fa-2x" style={{ color: "white" }} />
+        </Button>
+      )}
       <Dialog
         open={open}
         onClose={handleClose}
@@ -55,7 +71,7 @@ export default function Contact() {
           <TextField
             margin="dense"
             id="myEmail"
-            label="à bn.roub@gmail.com"
+            label="Cette fonctionnalité n'est pas ecore disponnible"
             type="email"
             fullWidth
             disabled
@@ -67,6 +83,7 @@ export default function Contact() {
             label="Email Address"
             type="email"
             fullWidth
+            disabled
           />
           <TextField
             margin="dense"
@@ -75,6 +92,7 @@ export default function Contact() {
             type="text"
             fullWidth
             multiline="true"
+            disabled
           />
         </DialogContent>
         <DialogActions>

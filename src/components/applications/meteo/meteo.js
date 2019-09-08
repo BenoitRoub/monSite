@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     boxShadow: "0 0 3px",
-    width: 370,
+    width: 330,
     margin: 30
   },
   input: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 }));
 const styleContainer = {
   background: "white",
-  maxWidth: 410,
+  maxWidth: 350,
   boxShadow: "0 0 4px",
   borderRadius: "5px",
   display: "flex",
